@@ -1,0 +1,12 @@
+dependencies:
+  - name: d3
+    src: htmlwidgets/lib/d3
+    version: 3.4.13
+    script:
+      - d3.min.js
+  - name: panels
+    src: htmlwidgets/lib/panels
+    script:
+      - panelutil.js
+      - dotchart/dotchart.js
+    stylesheet: panelutil.css

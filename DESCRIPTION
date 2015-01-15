@@ -1,0 +1,22 @@
+Package: testjs
+Version: 0.1-1
+Date: 2015-01-15
+Title: Test use of htmlwidgets
+Author: Karl W Broman <kbroman@biostat.wisc.edu>
+Maintainer: Karl W Broman <kbroman@biostat.wisc.edu>
+Description: Test use of htmlwidgets for D3-based interactive graphics
+    from R.
+Depends:
+    R (>= 2.15)
+Imports:
+    htmlwidgets,
+    jsonlite
+Suggests:
+    knitr,
+    devtools,
+    roxygen2,
+    testthat
+License: MIT + file LICENSE
+VignetteBuilder: knitr
+Roxygen: list(wrap=FALSE)
+LazyData: true
