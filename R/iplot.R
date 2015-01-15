@@ -43,5 +43,6 @@ function(x, y, group, indID, chartOpts=NULL)
 
     htmlwidgets::createWidget("iplot", x,
                               width=chartOpts$width,
-                              height=chartOpts$height)
+                              height=chartOpts$height,
+                              package="testjs")
 }
