@@ -9,14 +9,9 @@ Description: Test use of htmlwidgets for D3-based interactive graphics
 Depends:
     R (>= 2.15)
 Imports:
-    htmlwidgets,
-    jsonlite
+    htmlwidgets
 Suggests:
-    knitr,
     devtools,
-    roxygen2,
-    testthat
+    roxygen2
 License: MIT + file LICENSE
-VignetteBuilder: knitr
 Roxygen: list(wrap=FALSE)
-LazyData: true
