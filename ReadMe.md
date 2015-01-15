@@ -5,7 +5,7 @@
 [htmlwidgets](http://htmlwidgets.org) is an R package to facilitate
 the use of javascript-based data visualization from R.
 
-The current package is a simple package for me to play with as I learn
+This testjs package is a trial run for me to play with, as I learn
 to use htmlwidgets.
 
 #### Installation
