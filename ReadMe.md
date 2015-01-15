@@ -8,6 +8,39 @@ the use of javascript-based data visualization from R.
 The current package is a simple package for me to play with as I learn
 to use htmlwidgets.
 
+#### Installation
+
+Install testjs from its
+[GitHub repository](http://github.com/kbroman/testjs).
+You first need to install the
+[devtools](https://github.com/hadley/devtools)
+and [htmlwidgets](https://github.com/ramnathv/htmlwidgets) packages.
+
+```S
+install.packages(c("devtools", "htmlwidgets"))
+```
+
+Then install testjs using the `install_github` function in the
+[devtools](http://github.com/hadley/devtools) package.
+
+```S
+library(devtools)
+install_github("kbroman/testjs)
+```
+
+#### Example use
+
+There's just one function, `iplot`, for an interactive
+scatterplot. Here's an example of its use:
+
+```S
+library(testjs)
+x <- rnorm(100)
+grp <- sample(1:3, 100, replace=TRUE)
+y <- x*grp + rnorm(100)
+iplot(x, y, grp)
+```
+
 
 #### Licenses
 
