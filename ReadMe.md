@@ -25,7 +25,7 @@ Then install testjs using the `install_github` function in the
 
 ```S
 library(devtools)
-install_github("kbroman/testjs)
+install_github("kbroman/testjs")
 ```
 
 #### Example use
