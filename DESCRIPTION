@@ -1,6 +1,6 @@
 Package: testjs
-Version: 0.1-1
-Date: 2015-01-15
+Version: 0.1-2
+Date: 2015-01-16
 Title: Test use of htmlwidgets
 Author: Karl W Broman <kbroman@biostat.wisc.edu>
 Maintainer: Karl W Broman <kbroman@biostat.wisc.edu>
@@ -11,7 +11,10 @@ Depends:
 Imports:
     htmlwidgets
 Suggests:
+    knitr,
     devtools,
     roxygen2
 License: MIT + file LICENSE
+URL: https://github.com/kbroman/testjs
+VignetteBuilder: knitr
 Roxygen: list(wrap=FALSE)

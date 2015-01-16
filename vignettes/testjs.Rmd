@@ -1,0 +1,36 @@
+---
+title: testjs vignette
+author: Karl Broman
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{testjs vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8](inputenc)
+---
+
+This is a test of the [testjs](https://github.com/kbroman/testjs)
+package within an R Markdown document. (testjs is a test package I
+created in order to learn about
+[htmlwidgets](http://htmlwidgets.org).)
+
+Load the library.
+
+```{r load_lib}
+library(testjs)
+```
+
+Simulate some data.
+
+```{r sim_data}
+x <- rnorm(100)
+grp <- sample(1:3, 100, replace=TRUE)
+y <- x*grp + rnorm(100)
+```
+
+Try out the `iplot` function. (Need to limit the width and height to
+fit within what R Markdown expects.)
+
+```{r iplot}
+iplot(x, y, grp, chartOpts=list(width=600, height=400))
+```
