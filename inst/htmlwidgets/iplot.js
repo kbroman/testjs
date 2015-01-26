@@ -5,7 +5,7 @@ HTMLWidgets.widget({
   initialize: function(el, width, height) {
     return d3.select(el).append("svg").attr("width", width).attr("height", height).attr("class", "testjs");
   },
-  renderValue: function(el, x, instance) {
+  renderValue: function(el, x) {
     var axispos, chartOpts, data, height, margin, mychart, nxticks, nyticks, pointcolor, pointsize, pointstroke, rectcolor, rotate_ylab, title, titlepos, width, xNA, xlab, xlim, xticks, yNA, ylab, ylim, yticks, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
     data = x.data;
     chartOpts = x.chartOpts;
@@ -65,5 +65,8 @@ HTMLWidgets.widget({
     }).on("mouseout", function(d) {
       return d3.select(this).attr("r", pointsize);
     });
+  },
+  resize: function(el, width, height) {
+    return d3.select(el).select("svg").attr("width", width).attr("height", height);
   }
 });

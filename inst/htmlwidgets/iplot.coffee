@@ -12,7 +12,7 @@ HTMLWidgets.widget({
           .attr("height", height)
           .attr("class", "testjs")
 
-    renderValue: (el, x, instance) ->
+    renderValue: (el, x) ->
 
         data = x.data
         chartOpts = x.chartOpts
@@ -75,4 +75,11 @@ HTMLWidgets.widget({
                    d3.select(this).attr("r", pointsize*2)
                .on "mouseout", (d) ->
                    d3.select(this).attr("r", pointsize)
+
+    resize: (el, width, height) ->
+        d3.select(el).select("svg")
+          .attr("width", width)
+          .attr("height", height)
+
+
 })
