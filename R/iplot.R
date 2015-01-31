@@ -46,3 +46,13 @@ function(x, y, group, indID, chartOpts=NULL)
                               height=chartOpts$height,
                               package="testjs")
 }
+
+#' @export
+iplot_output <- function(outputId, width="100%", height="800") {
+    htmlwidgets::shinyWidgetOutput(outputId, "iplot", width, height, package="testjs")
+}
+#' @export
+iplot_render <- function(expr, env=parent.frame(), quoted=FALSE) {
+    if(!quoted) { expr <- substitute(expr) } # force quoted
+    htmlwidgets::shinyRenderWidget(expr, iplot_output, env, quoted=TRUE)
+}
