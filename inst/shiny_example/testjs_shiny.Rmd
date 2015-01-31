@@ -1,7 +1,6 @@
 ---
 title: "Example Shiny app with testjs"
 author: "Karl Broman"
-date: "30 Jan 2015"
 output: html_document
 runtime: shiny
 ---
