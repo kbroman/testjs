@@ -1,0 +1,50 @@
+---
+title: "Example Shiny app with testjs"
+author: "Karl Broman"
+date: "30 Jan 2015"
+output: html_document
+runtime: shiny
+---
+
+Load the [shiny](http://shiny.rstudio.com/) and
+[testjs](https://github.com/kbroman/testjs) libraries.
+
+```{r, load_libraries}
+library(shiny)
+library(testjs)
+```
+
+Simulate some data.
+
+```{r, sim_data}
+x <- rnorm(100)
+grp <- sample(1:3, 100, replace=TRUE)
+y <- x*grp + rnorm(100)
+```
+
+Define the `ui` and `server` bits for the Shiny app. It's going to just have a check box for turning the coloring of points by group.
+
+```{r, ui_and_server}
+ui <- shinyUI(fluidPage(
+    checkboxInput("color_points", "Color points by group", value=TRUE),
+    iplot_output('iplot')
+    ))
+
+server <- function(input, output)
+{
+    output$iplot <- iplot_render(
+        if(input$color_points) {
+            iplot(x, y, grp)
+        }
+        else {
+            iplot(x, y)
+        }
+        )
+}
+```
+
+Finally, the Shiny app.
+
+```{r shiny_app}
+shinyApp(ui=ui, server=server, options=list(height=900))
+```
