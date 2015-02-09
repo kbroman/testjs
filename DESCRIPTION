@@ -1,6 +1,6 @@
 Package: testjs
-Version: 0.1-4
-Date: 2015-01-30
+Version: 0.1-5
+Date: 2015-02-09
 Title: Test use of htmlwidgets
 Author: Karl W Broman <kbroman@biostat.wisc.edu>
 Maintainer: Karl W Broman <kbroman@biostat.wisc.edu>
