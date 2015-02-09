@@ -84,6 +84,13 @@ HTMLWidgets.widget({
                .on "mouseout", (d) ->
                    d3.select(this).attr("r", pointsize)
 
+        svg.append("text")
+           .attr("x", margin.left)
+           .attr("y", margin.top/2)
+           .text("#{width} x #{height}")
+           .style("text-anchor", "start")
+           .style("dominant-baseline", "middle")
+
     resize: (el, width, height) ->
         d3.select(el).select("svg")
           .attr("width", width)

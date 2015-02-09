@@ -66,11 +66,12 @@ HTMLWidgets.widget({
       group: data.group,
       indID: data.indID
     }).call(mychart);
-    return mychart.pointsSelect().on("mouseover", function(d) {
+    mychart.pointsSelect().on("mouseover", function(d) {
       return d3.select(this).attr("r", pointsize * 2);
     }).on("mouseout", function(d) {
       return d3.select(this).attr("r", pointsize);
     });
+    return svg.append("text").attr("x", margin.left).attr("y", margin.top / 2).text(width + " x " + height).style("text-anchor", "start").style("dominant-baseline", "middle");
   },
   resize: function(el, width, height) {
     return d3.select(el).select("svg").attr("width", width).attr("height", height);
