@@ -44,6 +44,16 @@ function(x, y, group, indID, chartOpts=NULL)
     htmlwidgets::createWidget("iplot", x,
                               width=chartOpts$width,
                               height=chartOpts$height,
+                              sizingPolicy=htmlwidgets::sizingPolicy(browser.defaultWidth=900,
+                                                                     browser.defaultHeight=600,
+                                                                     browser.padding=10,
+                                                                     viewer.defaultWidth=600,
+                                                                     viewer.defaultHeight=400,
+                                                                     viewer.padding=15,
+                                                                     viewer.paneHeight=430,
+                                                                     knitr.defaultWidth=900,
+                                                                     knitr.defaultHeight=600,
+                                                                     knitr.figure=FALSE),
                               package="testjs")
 }
 
