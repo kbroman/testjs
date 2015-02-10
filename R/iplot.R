@@ -51,6 +51,7 @@ function(x, y, group, indID, chartOpts=NULL)
                                                                      viewer.defaultHeight=400,
                                                                      viewer.padding=15,
                                                                      viewer.paneHeight=430,
+                                                                     viewer.fill=FALSE,
                                                                      knitr.defaultWidth=900,
                                                                      knitr.defaultHeight=600,
                                                                      knitr.figure=FALSE),
