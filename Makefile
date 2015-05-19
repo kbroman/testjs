@@ -3,7 +3,7 @@ all: jspanels jscharts doc
 
 # build package documentation
 doc:
-	R -e 'library(devtools);document()'
+	R -e 'devtools::document()'
 
 PANEL_DIR = inst/htmlwidgets/lib/panels
 SCATTERPLOT_DIR = ${PANEL_DIR}/scatterplot
